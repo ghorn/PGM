@@ -6,6 +6,7 @@ module Main
 
 import PGM.Elim
 import PGM.Factor
+import PGM.Graph ( Graph(..), reifyExpr )
 import PGM.Vars
 import PGM.Statistics
 
@@ -40,3 +41,8 @@ main = do
   print zFac
   print uFac
   putStrLn $ "E[" ++ (show u) ++ "] = " ++ (show $ expectation g (mkRV u))
+  putStrLn "=============  reifying the graph yo  =============="
+  Graph nodes tip <- reifyExpr u
+  putStrLn $ "tip: " ++ show tip
+  putStrLn "nodes:"
+  mapM_ print nodes
