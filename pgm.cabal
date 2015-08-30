@@ -12,6 +12,7 @@ library
   exposed-modules:     PGM.Elim,
                        PGM.Factor,
                        PGM.Graph,
+                       PGM.GraphViz,
                        PGM.Statistics,
                        PGM.Vars
   hs-source-dirs:      src
@@ -19,6 +20,8 @@ library
   build-depends:       base >=4.6 && <5
                      , containers >= 0.5.5.1
                      , data-reify >= 0.6
+                     , fgl
+                     , graphviz
   ghc-options:         -O2
   ghc-prof-options:    -O2 -Wall -prof -fprof-auto -fprof-cafs -rtsopts
 

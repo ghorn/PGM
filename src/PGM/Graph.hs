@@ -7,6 +7,7 @@
 
 module PGM.Graph
        ( Graph(..)
+       , GRandVarExpr(..)
        , reifyExpr
        ) where
 
